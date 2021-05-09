@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #000 url(img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    width: 100%;
+    padding: 3.125em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 1.25em;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    background-color: white;
+    padding: 1.25em;
+    width: 70%;
+}
+
+.main article .imagen {
+    margin-bottom: 1em;
+}
+
+.main article .imagen img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main article h2 {
+    margin-bottom: 1rem;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.main article p {
+    margin-bottom: 1rem;
+    line-height: 1.8em;
+}
+
+aside {
+    width: 30%;
+    background-color: #0077b6;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside .ad {
+    font-size: 1.8em;
+    text-align: center;
+    color: white;
+    padding: 2em 0;
+    background-color: #023e8a;
+    margin: 1.2em 0;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, .2);
+    padding: 1.2em;
+    width: 100%;
+    margin: 1em 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .redes-sociales a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2em;
+}
+
+footer .redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:800px) {
+    .main {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    aside .ad {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 1.2em;
+    }
+
+    header .menu {
+        background-color: rgba(255, 255, 255, .2);
+        text-align: center;
+        padding: 1.2em;
+        width: 100%;
+    }
+
+    header .menu a {
+        margin: 0 1em;
+    }
+
+    header .logo {
+        margin-bottom: 1.2em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .autor{
+        order: 2;
+    }
+
+    footer .redes-sociales {
+        order: 1;
+        margin-bottom: 1.2em;
+    }
+
+    footer .redes-sociales a {
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width:400px) {
+    aside {
+        display: none;
+    }
+}
